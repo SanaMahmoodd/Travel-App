@@ -26,11 +26,11 @@ Ensure you have the specified Node.js version installed for compatibility.
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/travel-app.git
+   git clone https://github.com/your-username/Travel-App.git
    ```
 2. Navigate into the project directory:
    ```bash
-   cd travel-app
+   cd Travel-App
    ```
 3. Install the necessary dependencies:
    ```bash
@@ -136,6 +136,7 @@ To set up **webpack** and start your development environment, follow these steps
    - The app will run at **http://localhost:4007**.
 
 This will ensure that both your **frontend** (with hot reloading) and **backend** (Express) are up and running smoothly during development.
+
 ---
 
 ## 📜 License
