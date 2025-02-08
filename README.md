@@ -43,18 +43,7 @@ Ensure you have the specified Node.js version installed for compatibility.
    PIXABAY_API_KEY=your-pixabay-api-key
    ```
    - Replace `your-geonames-username`, `your-weatherbit-api-key`, and `your-pixabay-api-key` with your actual API credentials.
-
----
-
-## ▶️ Running the App
-
-1. Start the development server:  
-   ```bash
-   npm run start
-   ```
-   - The app will run at **http://localhost:4007**.
-
-2. Test the API endpoints using tools like **Postman** or **cURL**.
+   - Test the API endpoints using tools like **Postman** or **cURL**.
 
 ---
 
@@ -123,6 +112,32 @@ NODE_OPTIONS=--experimental-vm-modules npm run test --detectOpenHandles
 
 ---
 
+## 🛠 Build & Development
+
+To set up **webpack** and start your development environment, follow these steps:
+
+1. First, build your project to create the `dist` folder:
+
+   ```bash
+   npm run build
+   ```
+
+2. Then, start the development server with webpack:
+
+   ```bash
+   npm run dev
+   ```
+
+3. Finally, you can run both the development server and Express simultaneously for hot reloading and a working backend:
+
+   ```bash
+   npm run start
+   ```
+   - The app will run at **http://localhost:4007**.
+
+This will ensure that both your **frontend** (with hot reloading) and **backend** (Express) are up and running smoothly during development.
+---
+
 ## 📜 License
 This project is licensed under the **MIT License**. Check the `LICENSE` file for more details.
 
@@ -139,7 +154,10 @@ This project is licensed under the **MIT License**. Check the `LICENSE` file for
 - **Ensure your Node.js version is v20.12.2** to avoid compatibility issues.
 - The `.env` file should be kept private and not included in any public repositories.
 - API keys are required to run the app; sign up on the respective API provider websites to get them.
+- **Ensure Run** `npm run build`to create the dist folder, then `npm run dev` for development, and `npm run start` to run both webpack and Express with hot reloading.
 
-Enjoy exploring the world with the Travel App! 🌍✨
+Enjoy exploring the world with the Travel App 🌍✨!
 
----# Travel-App
+---
+by sana saleh
+

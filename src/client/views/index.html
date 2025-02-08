@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Travel App</title>
+</head>
+<body>
+  <div id="app">
+    <h1>Travel Planner App</h1>
+    <form id="travel-form">
+      <label for="destination">Enter Destination:</label>
+      <input type="text" id="destination" name="destination" required />
+      
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" name="start-date" required />
+      
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" name="end-date" required />
+      
+      <button type="submit">Plan Trip</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script>
+    // تسجيل الـ Service Worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    });
+  }
+  </script>
+</body>
+</html>

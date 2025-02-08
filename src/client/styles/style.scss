@@ -1,0 +1,94 @@
+// تعريف الألوان
+$primary-color: #800000; // اللون الخمري الأساسي
+$primary-hover: #660000; // لون التحويم
+$background-color: #F1F8E9; // لون الخلفية
+$text-color: #333333; // لون النص
+$box-shadow-color: rgba(0, 0, 0, 0.15);
+$font-family: 'Poppins', Arial, sans-serif;
+
+body {
+  font-family: $font-family;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+
+  #app {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px $box-shadow-color;
+    border: 1px solid #e3e3e3;
+
+    h1 {
+      text-align: center;
+      color: $primary-color;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin: 12px 0 6px;
+        font-weight: 600;
+        color: $text-color;
+      }
+
+      input {
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: 0 0 5px rgba(128, 0, 0, 0.5);
+        }
+      }
+
+      // تخصيص حقل التاريخ
+      input[type="date"] {
+        color: $text-color;
+        font-family: $font-family;
+      
+        &::-webkit-calendar-picker-indicator {
+          filter: invert(50%);
+        }
+      
+        // إضافة تنسيق يدعم المتصفحات الأخرى
+        &::-moz-calendar-picker-indicator {
+          filter: invert(50%);
+        }
+      }
+      
+      button {
+        font-family: $font-family;
+        padding: 12px;
+        margin-top: 10px;
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: $primary-hover;
+          box-shadow: 0 4px 8px rgba(102, 0, 0, 0.3);
+        }
+
+        &:active {
+          transform: scale(0.98);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "travel",
+  "version": "1.0.0",
+  "description": "This is a simple travel app that allows users to search for locations, get weather information, and view related images. It uses **Node.js**, **Express**, and integrates with various third-party APIs: **GeoNames API** for location data, **Weatherbit API** for weather information, and **Pixabay API** for fetching images.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/server.js",
+    "build": "webpack --config webpack.config.js",
+    "dev": "webpack serve --mode development --open",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.26.7",
+    "@babel/preset-env": "^7.26.7",
+    "babel-jest": "^29.7.0",
+    "babel-loader": "^9.2.1",
+    "body-parser": "^1.20.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "cors": "^2.8.5",
+    "css-loader": "^7.1.2",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.19.0",
+    "express": "^4.21.2",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "node-sass": "^9.0.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0",
+    "workbox-webpack-plugin": "^7.3.0"
+  },
+  "dependencies": {
+    "jspdf": "^2.5.2",
+    "node-fetch": "^2.7.0"
+  }
+}
