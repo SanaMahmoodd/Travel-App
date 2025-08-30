@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -149,5 +150,6 @@ app.post('/getImage', async (req, res) => {
     res.status(500).send({ error: 'Internal server error' });
   }
 });
+
 
 export default app;
