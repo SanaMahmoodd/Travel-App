@@ -23,11 +23,11 @@ app.use(cors({
 }));
 
 // ملفات الواجهة الأمامية
-app.use(express.static(join(__dirname, '../../client')));
+app.use(express.static(join(__dirname, '../client')));
 
 // الصفحة الرئيسية
 app.get('/', (_req, res) => {
-  res.sendFile(join(__dirname, '../../client/views/index.html'));
+  res.sendFile(join(__dirname, '../client/views/index.html'));
 });
 
 // endpoint للتأكد من تشغيل السيرفر
@@ -54,7 +54,7 @@ app.post('/getLocation', async (req, res) => {
       res.status(404).send({ error: 'Location not found' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching data from GeoNames:', error);
     res.status(500).send({ error: 'Internal server error' });
   }
 });
@@ -82,7 +82,7 @@ app.post('/getWeather', async (req, res) => {
       res.status(404).send({ error: 'Weather data not found' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching data from Weatherbit:', error);
     res.status(500).send({ error: 'Internal server error' });
   }
 });
@@ -106,7 +106,7 @@ app.post('/getImage', async (req, res) => {
       res.status(404).send({ error: 'Image not found for the given location' });
     }
   } catch (error) {
-    console.error(error);
+    console.error('Error fetching data from Pixabay:', error);
     res.status(500).send({ error: 'Internal server error' });
   }
 });
@@ -116,3 +116,5 @@ const PORT = process.env.PORT || 4007;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+export default app;
